@@ -77,7 +77,7 @@ namespace Scheduler.API.Controllers
         }
 
         [HttpGet("{id}/details", Name = "GetScheduleDetails")]
-        public IActionResult GetScheduleDetails(int id)
+        public IActionResult GetScheduleDetails(int id, int testfail)
         {
             Schedule _schedule = _scheduleRepository
                 .GetSingle(s => s.Id == id, s => s.Creator, s => s.Attendees);
