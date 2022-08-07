@@ -170,7 +170,7 @@ namespace Scheduler.API.Controllers
         }
 
         [HttpDelete("{id}", Name = "RemoveSchedule")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int id, int mainfail)
         {
             Schedule _scheduleDb = _scheduleRepository.GetSingle(id);
 
